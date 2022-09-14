@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Raihan Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,14 +22,15 @@
                 <a href="" for="logo">R.Y</a>
             </label>
                 <ul class="links">
-                    <li><a href="#" class="text-light">Home</a></li>
-                    <li><a href="#portfolio" class="text-light">Portfolio</a></li>
-                    <li><a href="" class="text-light">About</a></li>
-                    <button class="btn">
-                        <a  href="/assets/CV.pdf" download>Download CV</a>
-                        <img src="assets/icons/dnlwd.svg">
-                    </button>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
                 </ul>
+                <div class="toggle-darkmode">
+                    <div class="inner-toggle"><span class="material-symbols-rounded">
+                        dark_mode
+                        </span></div>
+                </div>
             
 
             <!-- Humberger menu -->
@@ -41,7 +43,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section class="page-one" >
             <div class="container">
                 <div class="left-content">
@@ -57,7 +59,7 @@
                 </div>
                 <div class="text">
                     <h1>Hello. <br />Im <span class="auto-typed"></span></h1>
-                    <h4 class="text-light">I am a junior UI/UX Designer and junior Web Developer.</h4>
+                    <h4>I am a junior UI/UX Designer and junior Web Developer.</h4>
                     <button class="uiux btn">
                         <a href="#uiux">UI/UX Design</a>
                     </button>
@@ -71,7 +73,7 @@
             <aside>
                 <div class="rounded ">
                 </div>
-                <img class="profile" src="assets/img/PngItem_5300796.png">
+                <img class="profile" src="assets/img/ProfileRay.png">
             </aside>
         </section>    
         
@@ -83,31 +85,62 @@
                 <section id="uiux">
                     <h2 class="title_portfolio">UI/UX Design</h2> 
                     <div class="group-card" >
-                        <div data-aos="fade-right" data-aos-duration="1000">
-                            <img src="./assets/img/uiDesign/Travel Apps 1.png">
-                            <img src="./assets/img/uiDesign/Mobile Ecommerce.png" alt="">
-                        </div>
-                        <div data-aos="fade-left" data-aos-duration="1000">
-                        <img src="./assets/img/uiDesign/ROG 2.png" alt="">
-                        <img src="./assets/img/uiDesign/Travel Apps 1.png">
-                        </div>
-                        <div class="rounded ">
-                        </div>
-                        <div class="rounded ">
-                        </div>
+                            <a href="https://dribbble.com/shots/17639508-Travel-Apps" data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                            <img src="./assets/img/uiDesign/Travel Apps 1.png" alt="uiTravelMobile">
+                            </a>
+                            <a href="https://dribbble.com/shots/18351544-Mobile-E-commerce-App" data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                                <img src="./assets/img/uiDesign/Mobile Ecommerce.png" alt="uiEcommerceMobile">
+                            </a>
+                            <a href="#" data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                                <img src="./assets/img/uiDesign/ROG 2.png" alt="uiLandingpageWebsite">
+                            </a>
                     </div> 
+                    <div class="rounded">
+                    </div>
+                    <div class="rounded">
+                    </div>
                 </section>
                 <section id="webdev">
                     <h2 class="title_portfolio">Website</h2> 
-                    <div class="group-card">
-                        
+                    <div class="group-card" >
+                        <a href="https://raihan-n.github.io/tampilanDestinasiWeb/" data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                            <img src="./assets/img/webDev/card1.png" alt="webDataWisata">
+                            </a>
+                            <a href="https://raihan-n.github.io/formLogin/" data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                                <img src="./assets/img/webDev/card2.png" alt="formLogin">
+                            </a>
+                            <a href="https://github.com/raiHan-N/note-app-dicoding-react-" data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" target="_blank">
+                                <img src="./assets/img/webDev/card3.png" alt="reactNotePad">
+                            </a>
+                    
+                        <div class="rounded">
+                        </div>
                     </div> 
                 </section>
             </div>
         </section>
+
+
+        <section id="aboutme">
+                <h1>About Me</h1>
+                    <h4>I am currently a student, I like to learn about web development as well as ui/ux design.</h4>
+        </section>
+
     </main>
     
+    <footer>
+        <h3>Create by Raihan</h3>
+        <div class="social-media">
+            <p><a href="mailto:raihan.nurliansyah@gmail.com">Email</a></p>
+            <p><a href="https://www.instagram.com/ray_arts_design">Instagram</a></p>
+            <p><a href="https://dribbble.com/">Dribble</a></p>
+            <p><a href="https://www.linkedin.com/in/raihan-nurliansyah-77114a215/">Linkedin</a></p>
+        </div>
+    </footer>
 
+    <button id="btn-top" ><span class="material-symbols-rounded">
+        keyboard_double_arrow_up
+        </span></button>
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

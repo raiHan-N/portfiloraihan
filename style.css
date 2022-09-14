@@ -1,6 +1,6 @@
 :root {
   --clr-light: #fff1e6;
-  --clr-primary: #ece4b7;
+  --clr-primary: #cac399;
   --clr-secondary: #e6aa68;
   --clr-logo: #7fb069;
   --clr-dark: #02020b;
@@ -52,7 +52,12 @@ body {
   color: var(--clr-light);
 }
 
-main {
+body.active {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.container {
   margin: 2rem;
 }
 
@@ -72,18 +77,13 @@ nav {
   letter-spacing: 0.75rem;
 }
 
-nav .links,
-nav .btn {
+nav .links {
   display: none;
 }
 
 nav a {
   text-decoration: none;
   font-size: 1.25em;
-}
-nav button a {
-  color: var(--clr-light);
-  font-weight: 600;
 }
 
 nav ul {
@@ -113,10 +113,6 @@ nav li a::after {
 nav li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-header {
-  display: inline;
 }
 
 .menu-toggle {
@@ -176,11 +172,53 @@ header {
   transform: translateX(30px);
 }
 
-section {
-  width: inherit;
-  margin: 3em 0;
+nav .toggle-darkmode {
+  display: flex;
+  align-items: center;
+  height: 53px;
+  width: 5rem;
+  background-color: var(--clr-primary);
+  border-radius: 30px;
+  box-shadow: inset -3px -3px 5px rgba(17, 16, 16, 0.31);
+  position: relative;
+  cursor: pointer;
 }
 
+nav a {
+  color: inherit;
+}
+
+nav .inner-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--clr-dark);
+  box-shadow: 2px 2px 5px rgba(21, 21, 21, 0.25);
+  border-radius: 1rem;
+  left: 10px;
+  transition: all 0.25s ease-in-out;
+}
+
+.inner-toggle span {
+  user-select: none;
+}
+
+nav .active {
+  left: 40px;
+  background-color: var(--clr-light);
+}
+
+section {
+  width: inherit;
+  margin: 5rem 0;
+}
+
+section h1 {
+  color: var(--clr-primary);
+}
 .icons {
   display: flex;
   flex-direction: column;
@@ -207,13 +245,12 @@ section {
 .left-content {
   display: flex;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
 }
 
 h1 {
   font-weight: 700;
   font-size: 2rem;
-  color: var(--clr-primary);
   margin-bottom: 3.125rem;
   animation: navbar 2s;
 }
@@ -221,7 +258,6 @@ h1 {
 h4 {
   font-weight: 400;
   font-size: 1.5rem;
-  color: var(--clr-primary);
   animation: navbar 2s;
 }
 
@@ -243,17 +279,25 @@ aside {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  margin: 2rem;
   justify-content: center;
 }
 
 .group-card img {
-  width: 8.5rem;
+  width: 100%;
+  justify-self: flex-start;
   transition: all 0.15s ease-in-out;
+  user-select: pointer;
+}
+
+.group-card a {
+  text-align: center;
 }
 
 .group-card img:hover {
   border: 2px solid var(--clr-primary);
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .uiux,
@@ -264,7 +308,14 @@ aside {
 
 .webdev {
   margin-top: 5%;
-  left: 20%;
+  left: 15%;
+}
+
+aside .rounded {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .rounded {
@@ -281,13 +332,32 @@ aside {
   background-color: rgba(127, 176, 105, 0.16);
 }
 
-#uiux .rounded {
+.portfolio section .rounded {
   left: -10rem;
-  width: 25rem;
-  height: 30rem;
   top: -2rem;
-  background-color: rgba(229, 229, 229, 0.19);
+  width: 15rem;
+  height: 30rem;
+  background-color: rgba(192, 176, 176, 0.48);
   opacity: 1;
+}
+
+.portfolio section .rounded:nth-child(4) {
+  left: inherit;
+  top: inherit;
+  right: -10rem;
+  bottom: -15rem;
+  width: 20rem;
+  height: 25rem;
+  background: rgba(127, 176, 105, 0.35);
+}
+
+.portfolio #webdev .rounded {
+  left: inherit;
+  top: inherit;
+  right: -4rem;
+  bottom: 7rem;
+  height: 20rem;
+  background-color: #996b3a9c;
 }
 
 #portfolio section {
@@ -295,12 +365,80 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 5rem;
 }
 
 .title_portfolio {
   color: var(--clr-primary);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
+}
+
+#aboutme {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+#aboutme h4 {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+#aboutme h1 {
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5rem;
+  padding: 5rem;
+  background-color: #03030f93;
+  text-align: center;
+  color: var(--clr-light);
+}
+
+footer h3 {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+#btn-top {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--clr-logo);
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
+  color: var(--clr-light);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -354,8 +492,7 @@ aside {
     font-size: 1.5rem;
   }
 
-  nav .links,
-  nav .btn {
+  nav .links {
     display: inherit;
   }
 
@@ -377,8 +514,26 @@ aside {
   }
 
   .group-card img {
-    width: 17em;
     transition: all 0.15s ease-in-out;
+  }
+
+  .portfolio section .rounded:nth-child(4) {
+    width: 40rem;
+    height: 45rem;
+  }
+
+  #aboutme {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  footer {
+    flex-direction: row;
+    text-align: inherit;
+  }
+
+  footer a {
+    font-size: 1.1em;
   }
 }
 /* Animation */
