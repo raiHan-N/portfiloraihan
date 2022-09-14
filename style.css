@@ -422,6 +422,10 @@ footer a {
   font-size: 0.8em;
 }
 
+footer a:hover {
+  color: #fff1e6c2;
+}
+
 #btn-top {
   position: fixed;
   right: 3rem;
