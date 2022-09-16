@@ -334,7 +334,7 @@ aside .rounded {
   position: absolute;
   border-radius: 100%;
   z-index: -9;
-  filter: blur(30.5px);
+  filter: blur(77.5px);
 }
 
 .page-one .rounded {
