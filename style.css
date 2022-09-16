@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -44,6 +45,7 @@ html {
 
 /* CSS */
 body {
+  width: 100vw;
   margin: 0;
   padding: 0;
   background-color: var(--clr-dark);
@@ -332,7 +334,7 @@ aside .rounded {
   position: absolute;
   border-radius: 100%;
   z-index: -9;
-  filter: blur(77.5px);
+  filter: blur(30.5px);
 }
 
 .page-one .rounded {
@@ -409,7 +411,7 @@ aside .rounded {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
 }
 
 #myskills img {
