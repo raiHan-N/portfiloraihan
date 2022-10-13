@@ -69,12 +69,14 @@ toggleDarkmode.addEventListener("click", function () {
     elem1.style.backgroundColor = "rgba(192, 176, 176, 0.58)";
     elem2.style.backgroundColor = "rgba(127, 176, 105, 0.75)";
     elem3.style.backgroundColor = "#996b3ade";
+    innerToggle.style.color = "black";
   } else {
     innerToggle.children[0].innerText = "dark_mode";
     elem.style.backgroundColor = "rgba(127, 176, 105, 0.16)";
     elem1.style.backgroundColor = "rgba(192, 176, 176, 0.48)";
     elem2.style.backgroundColor = "rgba(127, 176, 105, 0.35)";
     elem3.style.backgroundColor = "#996b3a9c";
+    innerToggle.style.color = "white";
   }
   body.classList.toggle("active");
 });

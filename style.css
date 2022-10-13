@@ -501,10 +501,14 @@ footer a:hover {
     opacity: 1;
     transform: translateX(0);
   }
+
+  nav {
+    color: white;
+  }
 }
 
 /* Desktop Vieww */
-@media (min-width: 900px) {
+@media (min-width: 901px) {
   nav .links {
     display: flex;
     align-items: center;
